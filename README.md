@@ -100,4 +100,6 @@ CREATE DATABASE automotiva_db;
 # Aplicação disponível em
 ```
 http://localhost:8085/api/veiculos
+
+http://localhost:8085/swagger
 ```
