@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Ficha Técnica Automotiva</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+<h1>🚗 Sistema Automotivo</h1>
+
+<!-- ================= CADASTRO ================= -->
+<div class="container">
+    <h2>➕ Cadastrar Veículo</h2>
+
+    <input id="marca" placeholder="Marca">
+    <input id="modelo" placeholder="Modelo">
+    <input id="versao" placeholder="Versão">
+
+    <h3>Especificações</h3>
+
+    <input id="motor" placeholder="Motor">
+    <input id="potencia" placeholder="Potência">
+    <input id="torque_max" placeholder="Torque Máx">
+    <input id="transmissao" placeholder="Transmissão">
+    <input id="tracao" placeholder="Tração">
+    <input id="amortecedores" placeholder="Amortecedores">
+    <input id="aceleracao_0_100" placeholder="0-100 km/h">
+    <input id="modos_conducao" placeholder="Modos de Condução">
+    <input id="modos_volante" placeholder="Modos de Volante">
+    <input id="modos_escapamento" placeholder="Modos de Escapamento">
+    <input id="modos_amortecedor" placeholder="Modos de Amortecedor">
+    <input id="farois" placeholder="Faróis">
+    <input id="rodas_pneus" placeholder="Rodas e Pneus">
+    <input id="preco" placeholder="Preço">
+
+    <button onclick="criar()">Cadastrar</button>
+</div>
+
+<!-- ================= LISTA ================= -->
+<div class="container">
+    <h2>📋 Veículos</h2>
+
+    <button onclick="listar()">Listar</button>
+
+    <table border="1" id="tabela">
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>Marca</th>
+            <th>Modelo</th>
+            <th>Versão</th>
+            <th>Ações</th>
+        </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+</div>
+
+<!-- ================= UPDATE ================= -->
+<div class="container">
+    <h2>✏️ Atualizar Veículo</h2>
+
+    <input id="idUpdate" placeholder="ID">
+    <input id="marcaUpdate" placeholder="Marca">
+    <input id="modeloUpdate" placeholder="Modelo">
+    <input id="versaoUpdate" placeholder="Versão">
+
+    <h3>Especificações</h3>
+
+    <input id="motorUpdate" placeholder="Motor">
+    <input id="potenciaUpdate" placeholder="Potência">
+    <input id="torque_maxUpdate" placeholder="Torque Máx">
+    <input id="transmissaoUpdate" placeholder="Transmissão">
+    <input id="tracaoUpdate" placeholder="Tração">
+    <input id="amortecedoresUpdate" placeholder="Amortecedores">
+    <input id="aceleracao_0_100Update" placeholder="0-100 km/h">
+    <input id="modos_conducaoUpdate" placeholder="Modos de Condução">
+    <input id="modos_volanteUpdate" placeholder="Modos de Volante">
+    <input id="modos_escapamentoUpdate" placeholder="Modos de Escapamento">
+    <input id="modos_amortecedorUpdate" placeholder="Modos de Amortecedor">
+    <input id="faroisUpdate" placeholder="Faróis">
+    <input id="rodas_pneusUpdate" placeholder="Rodas e Pneus">
+    <input id="precoUpdate" placeholder="Preço">
+
+    <button onclick="atualizar()">Atualizar</button>
+</div>
+
+<!-- ================= DELETE ================= -->
+<div class="container">
+    <h2>❌ Deletar</h2>
+    <input id="idDelete" placeholder="ID">
+    <button onclick="deletar()">Deletar</button>
+</div>
+
+<hr>
+
+<!-- ================= BUSCA ================= -->
+<div class="container">
+    <h2>🔍 Buscar</h2>
+
+    <input id="marcaBusca" placeholder="Marca">
+    <input id="modeloBusca" placeholder="Modelo">
+    <input id="versaoBusca" placeholder="Versão">
+    <input id="atributos" placeholder="motor,potencia">
+
+    <button onclick="buscar()">Buscar</button>
+
+    <pre id="resultado"></pre>
+</div>
+
+<hr>
+
+<!-- ================= COMPARAÇÃO ================= -->
+<div class="container">
+    <h2>⚔️ Comparar</h2>
+
+    <input id="m1" placeholder="Marca 1">
+    <input id="mo1" placeholder="Modelo 1">
+    <input id="v1" placeholder="Versão 1">
+
+    <input id="m2" placeholder="Marca 2">
+    <input id="mo2" placeholder="Modelo 2">
+    <input id="v2" placeholder="Versão 2">
+
+    <input id="attrCompare" placeholder="motor,potencia">
+
+    <button onclick="comparar()">Comparar</button>
+
+    <pre id="resultadoComparacao"></pre>
+</div>
+
+<script src="/js/script.js"></script>
+</body>
+</html>
