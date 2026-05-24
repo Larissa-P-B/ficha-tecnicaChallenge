@@ -67,7 +67,17 @@ public class VehicleService {
 
             String nome = normalizar(e.getAtributo().getNome());
 
-            resultado.put(nome, e.getValor());
+            String valorFormatado;
+
+            if ("X".equalsIgnoreCase(e.getValor())) {
+                valorFormatado = "Disponível";
+            } else if ("0".equals(e.getValor())) {
+                valorFormatado = "Não disponível";
+            } else {
+                valorFormatado = e.getValor();
+            }
+
+            resultado.put(nome, valorFormatado);
         }
 
         return new VehicleResponse(
