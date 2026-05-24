@@ -82,7 +82,7 @@ CREATE DATABASE automotiva_db;
 ```
 
 
-# Exemplo busca 
+# Exemplo busca especificações 
 
 ## POST /api/veiculos/especificacoes
 ```
@@ -96,17 +96,41 @@ CREATE DATABASE automotiva_db;
 }
 ```
 
+# Exemplo busca comparação 
+
+## POST /api/veiculos/comparar
+```
+{
+  "veiculo1": {
+    "marca": "FORD",
+    "modelo": "RANGER",
+    "versao": "Limited 3.0L V6 26MY",
+    "atributos": [
+      "CILINDRADA" , "POTENCIA"
+    ]
+  },
+  "veiculo2": {
+    "marca": "TOYOTA",
+    "modelo": "HILUX",
+    "versao": "STD Power Pack AT",
+    "atributos": [
+      "CILINDRADA" , "POTENCIA"
+    ]
+  }
+}
+```
 # Exemplo de atualização parcial
 
 ## PATCH /api/veiculos/1
+```
 {
   "marca": "Toyota Atualizada"
 }
-
+```
 
 # Aplicação disponível em
 ```
 http://localhost:8085/api/veiculos
 
-http://localhost:8085/swagger
+http://localhost:8085/swagger-ui/index.html
 ```
