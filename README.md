@@ -90,10 +90,9 @@ CREATE DATABASE automotiva_db;
   "marca": "ford",
   "modelo": "ranger",
   "versao": "XLT 3.0L V6 AT 26MY",
-  "especificacoes": {
-    "cilindrada": "3",
-    "potencia": "250"
-  }
+  "atributos": [
+    "cilindrada" , "potencia"
+  ]
 }
 ```
 
