@@ -1,4 +1,12 @@
-# 🚗 API Ficha Técnica Automotiva
+## Fabrini Soares - RM 557813 
+## Guilherme Cezarino Simões - RM 557724 
+## Larissa Pereira Biusse - RM 564068 
+## Rodrigo Leme - RM 550266 
+## Thamiris Almeida - RM 559155  
+## Werbeth Nunes - RM 559067 
+
+
+# 🚗 API SpeedSpec Ficha Técnica Automotiva
 
 API REST desenvolvida com Spring Boot para gerenciamento de veículos e especificações técnicas automotivas.
 
@@ -57,14 +65,15 @@ src/main/java/com/automotiva/ficha_tecnica
     └── Classe principal da aplicação
 ```
 
-| Método | Endpoint             | Descrição                      |
-| ------ | -------------------- | ------------------------------ |
-| POST   | `/api/veiculos`      | Criar veículo                  |
-| GET    | `/api/veiculos`      | Listar veículos                |
-| GET    | `/api/veiculos/{id}` | Buscar veículo por ID          |
-| PUT    | `/api/veiculos/{id}` | Atualizar veículo completo     |
-| PATCH  | `/api/veiculos/{id}` | Atualizar parcialmente veículo |
-| DELETE | `/api/veiculos/{id}` | Remover veículo                |
+| Método | Endpoint | Descrição |
+|:---:|---|---|
+| 🟧 PUT | `/api/veiculos/{id}` | Atualizar veículo |
+| 🟥 DELETE | `/api/veiculos/{id}` | Deletar veículo |
+| 🟩 PATCH | `/api/veiculos/{id}` | Atualizar parcialmente veículo |
+| 🟦 GET | `/api/veiculos` | Listar veículos |
+| 🟩 POST | `/api/veiculos` | Criar novo veículo |
+| 🟩 POST | `/api/veiculos/especificacoes` | Buscar especificações do veículo |
+| 🟩 POST | `/api/veiculos/comparar` | Comparar dois veículos |
 
 # Criar banco MySQL
 ```
@@ -73,19 +82,17 @@ CREATE DATABASE automotiva_db;
 ```
 
 
-# Exemplo de criação de veículo
+# Exemplo busca 
 
-## POST /api/veiculos
+## POST /api/veiculos/especificacoes
 ```
 {
-  "marca": "Toyota",
-  "modelo": "Corolla",
-  "versao": "XEI",
-  "especificacoes": {
-    "motor": "2.0",
-    "cambio": "CVT",
-    "combustivel": "Flex"
-  }
+  "marca": "ford",
+  "modelo": "ranger",
+  "versao": "XLT 3.0L V6 AT 26MY",
+  "atributos": [
+    "cilindrada" , "potencia"
+  ]
 }
 ```
 
@@ -100,4 +107,6 @@ CREATE DATABASE automotiva_db;
 # Aplicação disponível em
 ```
 http://localhost:8085/api/veiculos
+
+http://localhost:8085/swagger
 ```
